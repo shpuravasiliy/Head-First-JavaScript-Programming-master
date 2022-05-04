@@ -11,3 +11,10 @@ function whatShallIWear(temp) {
 whatShallIWear(50);
 whatShallIWear(80);
 whatShallIWear(60);
+
+function doIt(param) {
+    param = 2;
+}
+var test = 1;
+doIt(test);
+console.log(test);
