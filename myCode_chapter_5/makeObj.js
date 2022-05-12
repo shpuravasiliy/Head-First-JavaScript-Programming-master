@@ -1,11 +1,25 @@
-var cady = {
+var cadi = {
         make: "Cady",
         model: "GM Cadillac",
         year: 1955,
         color: "tan",
         passengers: 5,
         convertible: false,
-        mileage: 12892
+        mileage: 12892,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " " + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 var fiat = {
     make: "Fiat",
@@ -14,7 +28,21 @@ var fiat = {
     color: "Medium Blue",
     passengers: 2,
     convertible: false,
-    mileage: 88000
+    mileage: 88000,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " " + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 var taxi = {
     make: "Webville Motors",
@@ -23,7 +51,21 @@ var taxi = {
     color: "yellow",
     passengers: 4,
     convertible: false,
-    mileage: 281341
+    mileage: 281341,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " " + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 var chevy = {
     make: "Chevy",
@@ -32,23 +74,48 @@ var chevy = {
     color: "red",
     passengers: 2,
     convertible: false,
-    mileage: 1021
+    mileage: 1021,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " " + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 
-function prequal(car) {
-    if (car.mileage > 10000) {
-        return false;
-    } else if (car.year > 1960) {
-        return false;
-    }
-    return true;
-}
+// function prequal(car) {
+//     if (car.mileage > 10000) {
+//         return false;
+//     } else if (car.year > 1960) {
+//         return false;
+//     }
+//     return true;
+// }
+//
+// var car = fiat;
+//
+// var worthALook = prequal(car);
+// if (worthALook) {
+//     console.log("You gotta check out this " + car.make + " " + car.model);
+// } else {
+//     console.log("You should really pass on the " + car.make + " " + car.model);
+// }
 
-var car = fiat;
+cadi.start();
+cadi.drive();
+cadi.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+taxi.start();
+taxi.drive();
+taxi.stop();
 
-var worthALook = prequal(car);
-if (worthALook) {
-    console.log("You gotta check out this " + car.make + " " + car.model);
-} else {
-    console.log("You should really pass on the " + car.make + " " + car.model);
-}
